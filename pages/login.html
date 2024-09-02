@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="../script/app.js" type="text/javascript" defer></script>
+    <title>LogIn</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>LogIn</h1>
+        <p id="error-message"></p>
+        <form id="form">
+            <div>
+                <label for="email-input">
+                    <span>@</span>
+                </label>
+                <input type="email" name="email" id="email-input" placeholder="E-mail">
+            </div>
+
+            <div>
+                <label for="password-input">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M252-49q-51.98 0-88.99-37.01Q126-123.03 126-175v-376q0-51.97 37.01-88.99Q200.02-677 252-677h13v-51q0-91 62.5-154.5T480-946q90 0 152.5 63.5T695-728v51h13q51.97 0 88.99 37.01Q834-602.97 834-551v376q0 51.97-37.01 88.99Q759.97-49 708-49H252Zm228-234q33 0 56.5-23.5T560-363q0-33-23.5-56.5T480-443q-33 0-56.5 23.5T400-363q0 33 23.5 56.5T480-283Zm-89-394h178v-51q0-38.33-25.5-65.17Q518-820 480-820t-63.5 26.83Q391-766.33 391-728v51Z"/></svg>
+                </label>
+                <input type="password" name="password" id="password-input" placeholder="Password">
+            </div>
+
+            <button type="submit">LogIn</button>
+        </form>
+
+        <p>New here? 
+            <a href="../index.html">Create an Account</a>
+        </p>
+    </div>
+</body>
+</html>
