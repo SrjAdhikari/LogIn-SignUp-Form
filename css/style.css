@@ -1,0 +1,180 @@
+/* Import the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Define color variables for use throughout the CSS */
+:root {
+    --accent-color: #8672ff;
+    --base-color: #ffffff;
+    --text-color: #2e2b41; 
+    --input-color: #f3f0ff;
+    --error-color: #f06272;
+
+    --light-color-background: hsl(252, 30%, 95%);
+}
+
+/* Apply a consistent box model and reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set global styles for the HTML element */
+html {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* Style the body element */
+body {
+    min-height: 100vh;
+    background: var(--light-color-background);
+    overflow: hidden;
+}
+
+/* Style the wrapper that contains the form */
+.wrapper {
+    background-color: var(--base-color);
+    max-width: 400px;
+    min-height: 500px;
+    margin: 50px auto;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Style the heading inside the wrapper */
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+/* Style the form element */
+form {
+    min-width: 300px;
+    margin: 20px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Style the divs inside the form */
+form > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Style the labels inside the form */
+form label {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-color);
+    fill: var(--base-color); /* Color of SVG icons */
+    color: var(--base-color);
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* Style the input fields inside the form */
+form input {
+    flex-grow: 1; /* Allow inputs to grow and fill available space */
+    min-width: 0; /* Prevent inputs from shrinking */
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid var(--input-color);
+    border-left: none;
+    background-color: var(--input-color);
+    transition: 150ms ease;
+}
+
+/* Change border color on hover */
+form input:hover {
+    border-color: var(--accent-color);
+}
+
+/* Change border color on focus */
+form input:focus {
+    outline: none;
+    border-color: var(--text-color);
+}
+
+/* Change label background when input is focused */
+div:has(input:focus) > label {
+    background-color: var(--text-color);
+}
+
+/* Style placeholder text in inputs */
+form input::placeholder {
+    color: var(--text-color);
+}
+
+/* Style the submit button inside the form */
+form button {
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    border-radius: 100px; 
+    padding: 0.85em 4em; 
+    background-color: var(--accent-color);
+    color: var(--base-color);
+    font: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 150ms ease;
+}
+
+/* Change button background color on hover */
+form button:hover {
+    background-color: var(--text-color);
+}
+
+/* Style links */
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+/* Change link style on hover */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styling for screens narrower than 1100px */
+@media screen and (max-width: 1100px) {
+    .wrapper {
+        width: min(600px, 100%);
+        border-radius: 0;
+    }
+}
+
+/* Style form divs with the "incorrect" class to indicate errors */
+form div.incorrect label {
+    background-color: var(--error-color);
+}
+
+/* Style form inputs with the "incorrect" class to indicate errors */
+form div.incorrect input {
+    border-color: var(--error-color);
+}
+
+/* Style for the error message */
+#error-message {
+    color: var(--error-color);
+}
